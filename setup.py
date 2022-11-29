@@ -92,9 +92,9 @@ class BuildCMakeExt(_build_ext):
             cmake_args += ['-DCC_OPTIMIZE=OFF']
 
         # the parallel build has to be limited on some Linux VM machine.
-        cpu_number = os.environ.get('CPU_NUMBER')
+        cpu_number = "3"
         build_args = [
-            '--config', config,
+            '--config', "MinSizeRel",
             '--parallel' + ('' if cpu_number is None else ' ' + cpu_number)
         ]
 

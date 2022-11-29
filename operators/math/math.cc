@@ -5,7 +5,7 @@
 #endif
 #include "segment_extraction.hpp"
 #include "segment_sum.hpp"
-
+#include "multithreshold.hpp"
 
 FxLoadCustomOpFactory LoadCustomOpClasses_Math = 
     LoadCustomOpClasses<CustomOpClassBegin, 
@@ -14,4 +14,4 @@ FxLoadCustomOpFactory LoadCustomOpClasses_Math =
                         CustomOpInverse,
 #endif
                         CustomOpSegmentExtraction,
-                        CustomOpSegmentSum>;
+                        CustomOpSegmentSum, MultithresholdOp>;
