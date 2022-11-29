@@ -19,8 +19,6 @@ extern "C" bool ORT_API_CALL AddExternalCustomOp(const OrtCustomOp* c_op);
 constexpr const char* c_OpDomain = "ai.onnx.contrib";
 constexpr const char* c_ComMsExtOpDomain = "com.microsoft.extensions";
 
-const char c_OpDomain[] = "ai.onnx.contrib";
-
 struct BaseKernel {
   BaseKernel(const OrtApi& api) : api_(api), info_(nullptr), ort_(api_) {}
   BaseKernel(const OrtApi& api, const OrtKernelInfo* info) : api_(api), info_(info), ort_(api_) {}
