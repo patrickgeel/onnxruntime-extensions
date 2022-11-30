@@ -8,11 +8,11 @@ from onnx import AttributeProto, TensorProto, GraphProto
 
 
 # Create one input (ValueInfoProto)
-v = helper.make_tensor_value_info('v', TensorProto.DOUBLE, [6, 3, 2, 2])
-thresholds = helper.make_tensor_value_info('thresholds', TensorProto.DOUBLE, [3, 7])
+v = helper.make_tensor_value_info('v', TensorProto.FLOAT, [6, 3, 2, 2])
+thresholds = helper.make_tensor_value_info('thresholds', TensorProto.FLOAT, [3, 7])
 
 # Create one output (ValueInfoProto)
-results = helper.make_tensor_value_info('results', TensorProto.DOUBLE, [6, 3, 2, 2])
+results = helper.make_tensor_value_info('results', TensorProto.FLOAT, [6, 3, 2, 2])
 
 # Create a node (NodeProto) - This is based on Pad-11
 node_def = helper.make_node(
